@@ -1,0 +1,10 @@
+﻿  adventure.cpp
+d:\cs255\assignments\program4\adventure_starts18\place.h(26): warning C4018: '<': signed/unsigned mismatch
+d:\cs255\assignments\program4\adventure_starts18\place.h(29): warning C4018: '<': signed/unsigned mismatch
+d:\cs255\assignments\program4\adventure_starts18\person.h(43): warning C4018: '<': signed/unsigned mismatch
+d:\cs255\assignments\program4\adventure_starts18\person.h(79): warning C4018: '<': signed/unsigned mismatch
+d:\cs255\assignments\program4\adventure_starts18\werewolf.h(24): warning C4018: '<': signed/unsigned mismatch
+d:\cs255\assignments\program4\adventure_starts18\adventure.cpp(52): warning C4018: '<': signed/unsigned mismatch
+d:\cs255\assignments\program4\adventure_starts18\adventure.cpp(66): warning C4018: '<': signed/unsigned mismatch
+  Project1.vcxproj -> D:\CS255\Assignments\Program4\Adventure_startS18\Debug\Project1.exe
+  Project1.vcxproj -> D:\CS255\Assignments\Program4\Adventure_startS18\Debug\Project1.pdb (Partial PDB)

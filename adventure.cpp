@@ -74,7 +74,13 @@ int main()
 	place computer_lab("Computer Lab");
 	place basement("Basement");
 	place professors_office("Professor's Office");
+	place roof_computer_lab("Roof of Computer Lab");
+	place roof_prof_office("Roof of Professors OFfice");
 
+	can_go(professors_office, up, roof_prof_office);
+	can_go(roof_prof_office, down, professors_office);
+	can_go(computer_lab, up, roof_computer_lab);
+	can_go(roof_computer_lab, down, computer_lab);
 	can_go(mccormick, south, bakeless);
 	can_go(bakeless, north, mccormick);
 	can_go(bakeless, up, computer_lab);
@@ -95,6 +101,8 @@ int main()
 	install_thing(disk, computer_lab);
 	thing beer("beer");
 	install_thing(beer, professors_office);
+	thing jetpack("jetpack");
+	install_thing(jetpack, basement);
 
 	string command, arg;
 	me.look();

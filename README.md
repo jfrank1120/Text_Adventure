@@ -5,4 +5,4 @@ A text adventure created in CompSci 255 - Data Structures in C++
 # Contributors
 jfrank1120 - Jared Frank
 
-******* - Harman Dhillon
+HarmanGit - Harman Dhillon

@@ -121,6 +121,18 @@ int main()
 			cin >> arg;
 			me.go_look(string_to_direction(arg));
 		}
+		else if (command == "fly") {
+			place* currPlace = me.get_location();
+			if (*currPlace == roof_computer_lab && jetpack.owned()) {
+				me.move_to(&roof_prof_office);
+			}
+			else if (*currPlace == roof_prof_office && jetpack.owned()) {
+				me.move_to(&roof_computer_lab);
+			}
+			else {
+				cout << "You want to believe you can fly.... but sadly that is not the case." << endl;
+			}
+		}
 		else if (command == "take")
 		{
 			cin >> arg;

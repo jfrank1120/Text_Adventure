@@ -15,6 +15,7 @@ public:
 	virtual void greet_others();
 	virtual void greeted_by(person *persn);
 	virtual void go(direction dir);
+	bool same_room(string name) const;
 	void move_to(place *new_place);
 	void go_look(direction dir);
 	void take(thing *thng);
@@ -132,3 +133,45 @@ void person::act()
 	direction dir = (location->get_exits())[index];
 	go(dir);
 }
+// Completed
+void person::inventory() const {
+	cout << "In your inventory you have: ";
+	if (possessions.size() == 0) {
+		cout << "Nothing.....";
+	}
+	else {
+		for (int i = 0; i < possessions.size(); ++i) {
+			cout << possessions[i]->get_name() << ", ";
+		}
+	}
+	cout << endl;
+}
+
+void person::drop(thing *thng) {
+	if (thng != nullptr) {
+		vector<thing*>::iterator itr = possessions.begin();
+		while (*itr != thng && itr != possessions.end()) {
+			// Loops through inventory until specified item is found
+			itr++;
+		}
+		if (itr != possessions.end())
+		{
+			possessions.erase(itr);
+			location->add_thing(thng);
+			thng->change_owner(nullptr);
+			cout << thng->get_name() << " was dropped by " << this->get_name() << endl;
+		}
+		else {
+			cout << "That item is not currently in your inventory";
+		}
+	}
+	else {
+		cout << "That item is not currently in your inventory";
+	}
+	cout << endl;
+}
+bool person::same_room(string name) const
+{
+	return location->contains_thing(name);
+}
+

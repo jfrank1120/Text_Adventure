@@ -10,6 +10,7 @@ public:
 	place *neighbor_towards(direction dir) const { return neighbors[dir]; }
 	void add_thing(named_object *thng) { things.push_back(thng); }
 	void remove_thing(named_object *thng);
+	bool contains_thing(string thing) const;
 	void add_neighbor(direction dir, place *nbr)
 	{
 		neighbors[dir] = nbr; exits.push_back(dir);
@@ -31,5 +32,18 @@ void place::remove_thing(named_object *thng)
 			things.pop_back();
 		}
 }
+// Fixes error where object could be picked up anywhere
+bool place::contains_thing(string thing) const {
+	for (int i = 0; i < things.size(); i++)
+	{
+		if (things[i]->get_name() == thing)
+			return true;
+	}
+	return false;
+}
 
+bool operator==(place loc1, place loc2)
+{
+	return loc1.get_name() == loc2.get_name();
+}
 place heaven("Heaven");

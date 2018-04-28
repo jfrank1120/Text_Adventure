@@ -95,7 +95,7 @@ int main()
 	can_go(basement, up, bakeless);
 	can_go(mccormick, up, professors_office);
 	can_go(professors_office, down, mccormick);
-
+	
 	person me("Erik", mccormick, 10000);
 	install_person(me);
 	person veronica("Veronica", mccormick, 2);

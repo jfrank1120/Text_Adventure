@@ -45,4 +45,5 @@ void werewolf::eat_person(person *persn)
 void werewolf::act()
 {
 
+
 }

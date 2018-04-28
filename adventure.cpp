@@ -95,8 +95,10 @@ int main()
 	install_person(me);
 	person veronica("Veronica", mccormick, 2);
 	install_person(veronica);
-	werewolf cujo("Cujo", basement, 3);
+	werewolf cujo("Cujo", roof_computer_lab, 3);
 	install_person(cujo);
+	party_animal spuds("Spuds", basement, 8);
+	install_person(spuds);
 
 	thing disk("disk");
 	install_thing(disk, computer_lab);

@@ -1,16 +1,15 @@
-// Class for the part animal that inherits from the werewolf class
-
+// Class for the party animal that inherits from the werewolf class
 class party_animal : public werewolf 
 {
 	public:
-		party_animal(string name, place &loc, int thresh) : werewolf(nm, loc, thresh);
+		party_animal(string name, place &loc, int thresh) : werewolf(name, loc, thresh) {};
 		virtual void party_animal::eat_person(person *person);
 };
 
 void party_animal::eat_person(person *pers) {
 	if (pers->has_item("beer")) {
 		thing *beer = pers->
-		cout << get_name() << "says OH! IS THAT A BEER!? ";
+		cout << get_name() << "says ";
 		// Person loses Beer from their inventory
 		pers->drop(beer);
 		// Party_Animal takes beer

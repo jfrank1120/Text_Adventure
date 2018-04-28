@@ -155,7 +155,7 @@ int main()
 		else
 			cout << "Unknown command (ignored)." << endl;
 
-		if(me.has_item("jetpack") && me.get_location() == professors_office
+		if(me.has_item("jetpack") && me.get_location() == &professors_office
 		&& me.same_room("disk"))
 		{
 			cout << "Congrats! You win!" << endl;

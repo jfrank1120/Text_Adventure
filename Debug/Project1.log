@@ -2,11 +2,11 @@
 c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\place.h(27): warning C4018: '<': signed/unsigned mismatch
 c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\place.h(30): warning C4018: '<': signed/unsigned mismatch
 c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\place.h(37): warning C4018: '<': signed/unsigned mismatch
-c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(45): warning C4018: '<': signed/unsigned mismatch
-c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(81): warning C4018: '<': signed/unsigned mismatch
-c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(144): warning C4018: '<': signed/unsigned mismatch
-c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\werewolf.h(24): warning C4018: '<': signed/unsigned mismatch
-c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\party_animal.h(12): error C2039: 'cout': is not a member of 'person'
-  c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(2): note: see declaration of 'person'
+c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(46): warning C4018: '<': signed/unsigned mismatch
+c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(82): warning C4018: '<': signed/unsigned mismatch
+c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(145): warning C4018: '<': signed/unsigned mismatch
+c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\person.h(200): warning C4018: '<': signed/unsigned mismatch
+c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\werewolf.h(25): warning C4018: '<': signed/unsigned mismatch
 c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\adventure.cpp(53): warning C4018: '<': signed/unsigned mismatch
 c:\users\jared\documents\college doc's\sophmore year\second semester\data structures\program4\adventure_start\text_adventure\adventure.cpp(67): warning C4018: '<': signed/unsigned mismatch
+  Project1.vcxproj -> C:\Users\Jared\Documents\College Doc's\Sophmore Year\Second Semester\Data Structures\Program4\Adventure_start\Text_Adventure\Debug\Project1.exe

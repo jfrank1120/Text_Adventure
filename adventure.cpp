@@ -74,6 +74,8 @@ int main()
 	place bakeless("Bakeless Hall Lobby");
 	place computer_lab("Computer Lab");
 	place basement("Basement");
+	place quad("Quad");
+	place pit("Pit of Doom");
 	place professors_office("Professor's Office");
 	place roof_computer_lab("Roof of Computer Lab");
 	place roof_prof_office("Roof of Professors Office");
@@ -153,7 +155,7 @@ int main()
 		else
 			cout << "Unknown command (ignored)." << endl;
 
-		if(me.has_item("jetpack") && me.get_location() == "Professor's Office"
+		if(me.has_item("jetpack") && currPlace == professors_office
 		&& me.same_room("disk"))
 		{
 			cout << "Congrats! You win!" << endl;

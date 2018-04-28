@@ -45,7 +45,7 @@ void werewolf::eat_person(person *persn)
 void werewolf::act()
 {
   int num_exits = location->get_exits().size();
-	int index 0;
+	int index = 0;
 	if (num_exits == 0)
 		return;
 

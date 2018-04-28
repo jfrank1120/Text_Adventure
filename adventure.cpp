@@ -32,6 +32,7 @@ enum kind { named_obj, thing_obj, place_obj, person_obj };
 #include "place.h"
 #include "person.h"
 #include "werewolf.h"
+#include "party_animal.h"
 
 vector<thing*> all_things;
 vector<person*> all_people;

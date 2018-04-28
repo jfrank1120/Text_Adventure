@@ -20,6 +20,7 @@ public:
 	void go_look(direction dir);
 	void take(thing *thng);
 	void drop(thing *thng);
+	bool person::has_item(string item_name);
 	void clock();
 	virtual void act();
 	kind get_kind() { return person_obj; }
@@ -145,6 +146,22 @@ void person::inventory() const {
 		}
 	}
 	cout << endl;
+}
+
+bool person::has_item(string item_name) {
+	thing *item = new thing(item_name);
+	if (item != nullptr) {
+		vector<thing*>::iterator itr = possessions.begin();
+		while (*itr != item && itr != possessions.end()) {
+			// Loops through inventory until specified item is found
+			itr++;
+		}
+		if (itr != possessions.end())
+		{
+			return true;
+		}
+	}
+	return false;
 }
 
 void person::drop(thing *thng) {

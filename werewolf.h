@@ -44,6 +44,18 @@ void werewolf::eat_person(person *persn)
 
 void werewolf::act()
 {
+  int num_exits = location->get_exits().size();
+	int index 0;
+	if (num_exits == 0)
+		return;
 
-
+	if(num_exits >= 2)
+	{
+		index = rand() % 2;
+	} else if(num_exits == 1)
+	{
+		index = 0;
+	}
+	direction dir = (location->get_exits())[index];
+	go(dir);
 }

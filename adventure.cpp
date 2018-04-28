@@ -82,8 +82,13 @@ int main()
 	can_go(roof_prof_office, down, professors_office);
 	can_go(computer_lab, up, roof_computer_lab);
 	can_go(roof_computer_lab, down, computer_lab);
-	can_go(mccormick, south, bakeless);
-	can_go(bakeless, north, mccormick);
+	//can_go(mccormick, south, bakeless);
+	can_go(mccormick, south, quad); //bonus
+	can_go(quad, south,bakeless); //bonus
+	//can_go(bakeless, north, mccormick);
+	can_go(bakeless, north, quad); //bonus
+	can_go(quad, north, mccormick); //bonus
+	can_go(quad, down, pit); //bonus
 	can_go(bakeless, up, computer_lab);
 	can_go(computer_lab, down, bakeless);
 	can_go(bakeless, down, basement);

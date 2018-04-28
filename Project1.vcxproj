@@ -67,6 +67,7 @@
     <ClCompile Include="adventure.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\..\College Doc%27s\Sophmore Year\Second Semester\Data Structures\Program4\Adventure_start\Text_Adventure\party_animal.h" />
     <ClInclude Include="named_obj.h" />
     <ClInclude Include="person.h" />
     <ClInclude Include="place.h" />

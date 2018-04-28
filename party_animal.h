@@ -8,8 +8,8 @@ class party_animal : public werewolf
 
 void party_animal::eat_person(person *pers) {
 	if (pers->has_item("beer")) {
-		thing *beer = pers->
-		cout << get_name() << "says ";
+		thing *beer = pers->get_item("beer");
+		cout << get_name() << "says YOOO PASS ME THAT BREWSKI " << pers->get_name << "!" << endl;
 		// Person loses Beer from their inventory
 		pers->drop(beer);
 		// Party_Animal takes beer

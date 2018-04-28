@@ -10,7 +10,6 @@ public:
 	place* get_location() const { return location; }
 	vector<thing*> get_possessions() const { return possessions; }
 	void look() const;
-	void inventory() const {};
 	virtual string get_greeting() const { return greeting; }
 	virtual void greet_others();
 	virtual void greeted_by(person *persn);
@@ -20,9 +19,11 @@ public:
 	void go_look(direction dir);
 	void take(thing *thng);
 	void drop(thing *thng);
-	bool person::has_item(string item_name);
+	bool has_item(string item_name);
+	thing* get_item(string item_name);
 	void clock();
 	virtual void act();
+	void inventory() const;
 	kind get_kind() { return person_obj; }
 protected:
 	static const string greeting;
@@ -187,8 +188,20 @@ void person::drop(thing *thng) {
 	}
 	cout << endl;
 }
+// Checks to see if the item is in the same room as
+// the person who is attempting to interact with it
 bool person::same_room(string name) const
 {
 	return location->contains_thing(name);
+}
+// Gets the intended item the person's inventory
+thing* person::get_item(string name)
+{
+	for (int i = 0; i < possessions.size(); i++)
+	{
+		if (possessions[i]->get_name() == name)
+			return possessions[i];
+	}
+	return nullptr;
 }
 

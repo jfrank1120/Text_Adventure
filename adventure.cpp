@@ -102,8 +102,10 @@ int main()
 	install_person(veronica);
 	werewolf cujo("Cujo", roof_computer_lab, 3);
 	install_person(cujo);
-	party_animal spuds("Spuds", basement, 8);
+	party_animal spuds("Spuds", basement, 9);//bonus: required Spuds threhold @9
 	install_person(spuds);
+	werewolf wereMan("wereMan", pit, 5);//bonus
+	install_person(wereMan);
 
 	thing disk("disk");
 	install_thing(disk, computer_lab);

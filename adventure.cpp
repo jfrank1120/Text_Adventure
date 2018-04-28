@@ -76,7 +76,7 @@ int main()
 	place basement("Basement");
 	place professors_office("Professor's Office");
 	place roof_computer_lab("Roof of Computer Lab");
-	place roof_prof_office("Roof of Professors OFfice");
+	place roof_prof_office("Roof of Professors Office");
 
 	can_go(professors_office, up, roof_prof_office);
 	can_go(roof_prof_office, down, professors_office);
@@ -95,7 +95,7 @@ int main()
 	can_go(basement, up, bakeless);
 	can_go(mccormick, up, professors_office);
 	can_go(professors_office, down, mccormick);
-	
+
 	person me("Erik", mccormick, 10000);
 	install_person(me);
 	person veronica("Veronica", mccormick, 2);
@@ -152,6 +152,12 @@ int main()
 			cout << "Time passes" << endl;
 		else
 			cout << "Unknown command (ignored)." << endl;
+
+		if(me.has_item("jetpack") && me.get_location() == "Professor's Office"
+		&& me.same_room("disk"))
+		{
+			cout << "Congrats! You win!" << endl;
+		}
 		clock();
 		getline(cin, arg);  // read away rest of line
 	}

@@ -11,6 +11,7 @@ public:
 	}
 	void greet_others();
 	virtual void eat_person(person *prsn);
+	void act();
 private:
 	static const string greeting;
 };
@@ -39,4 +40,10 @@ void werewolf::eat_person(person *persn)
 	cout << persn->get_name() <<
 		" says it is a far better place i go to " << endl;
 	persn->move_to(&heaven);
+}
+
+void werewolf::act()
+{
+
+
 }

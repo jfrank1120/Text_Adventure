@@ -82,23 +82,30 @@ int main()
 	can_go(roof_prof_office, down, professors_office);
 	can_go(computer_lab, up, roof_computer_lab);
 	can_go(roof_computer_lab, down, computer_lab);
-	can_go(mccormick, south, bakeless);
-	can_go(bakeless, north, mccormick);
+	//can_go(mccormick, south, bakeless);
+	can_go(mccormick, south, quad); //bonus
+	can_go(quad, south,bakeless); //bonus
+	//can_go(bakeless, north, mccormick);
+	can_go(bakeless, north, quad); //bonus
+	can_go(quad, north, mccormick); //bonus
+	can_go(quad, down, pit); //bonus
 	can_go(bakeless, up, computer_lab);
 	can_go(computer_lab, down, bakeless);
 	can_go(bakeless, down, basement);
 	can_go(basement, up, bakeless);
 	can_go(mccormick, up, professors_office);
 	can_go(professors_office, down, mccormick);
-
+	
 	person me("Erik", mccormick, 10000);
 	install_person(me);
 	person veronica("Veronica", mccormick, 2);
 	install_person(veronica);
 	werewolf cujo("Cujo", roof_computer_lab, 3);
 	install_person(cujo);
-	party_animal spuds("Spuds", basement, 8);
+	party_animal spuds("Spuds", basement, 9);//bonus: required Spuds threhold @9
 	install_person(spuds);
+	werewolf wereMan("wereMan", pit, 5);//bonus
+	install_person(wereMan);
 
 	thing disk("disk");
 	install_thing(disk, computer_lab);

@@ -161,6 +161,7 @@ bool person::has_item(string item_name) {
 }
 
 void person::drop(thing *thng) {
+	//thing *thng = new thing(name);
 	if (thng != nullptr) {
 		vector<thing*>::iterator itr = possessions.begin();
 		while (*itr != thng && itr != possessions.end()) {

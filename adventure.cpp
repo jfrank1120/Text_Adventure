@@ -134,6 +134,10 @@ int main()
 		else if (command == "inventory") {
 			me.inventory();
 		}
+		else if (command == "drop") {
+			cin >> arg;
+			me.drop(string_to_thing(arg));
+		}
 		else if (command == "go")
 		{
 			cin >> arg;

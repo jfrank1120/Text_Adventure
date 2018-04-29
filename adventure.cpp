@@ -84,10 +84,10 @@ int main()
 	can_go(roof_prof_office, down, professors_office);
 	can_go(computer_lab, up, roof_computer_lab);
 	can_go(roof_computer_lab, down, computer_lab);
-	//can_go(mccormick, south, bakeless);
+	//can_go(mccormick, south, bakeless);---------—
 	can_go(mccormick, south, quad); //bonus
-	can_go(quad, south,bakeless); //bonus
-	//can_go(bakeless, north, mccormick);
+	can_go(quad, south, bakeless); //bonus
+								   //can_go(bakeless, north, mccormick);
 	can_go(bakeless, north, quad); //bonus
 	can_go(quad, north, mccormick); //bonus
 	can_go(quad, down, pit); //bonus
@@ -155,7 +155,7 @@ int main()
 		else
 			cout << "Unknown command (ignored)." << endl;
 
-		if(me.has_item("jetpack") && me.get_location() == &professors_office
+		if(/*me.has_item("jetpack") &&*/ me.get_location() == &professors_office
 		&& me.same_room("disk"))
 		{
 			cout << "Congrats! You win!" << endl;

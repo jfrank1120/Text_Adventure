@@ -172,7 +172,7 @@ void person::drop(thing *thng) {
 			possessions.erase(itr);
 			location->add_thing(thng);
 			thng->change_owner(nullptr);
-			cout << thng->get_name() << " was dropped by " << this->get_name() << endl;
+			cout << thng->get_name() << " was dropped by " << this->get_name();
 		}
 		else {
 			cout << "That item is not currently in your inventory";

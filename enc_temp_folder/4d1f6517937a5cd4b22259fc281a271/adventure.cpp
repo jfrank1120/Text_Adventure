@@ -125,15 +125,10 @@ int main()
 		//cout << "Curr Loc: " << me.get_location()->get_name();
 		cout << "> ";
 		cin >> command;
-		if (command == "quit") {
+		if (command == "quit")
 			return 0;
-		}
-		else if (command == "look") {
+		else if (command == "look")
 			me.look();
-		}
-		else if (command == "inventory") {
-			me.inventory();
-		}
 		else if (command == "go")
 		{
 			cin >> arg;

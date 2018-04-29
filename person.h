@@ -150,16 +150,11 @@ void person::inventory() const {
 }
 
 bool person::has_item(string item_name) {
-	thing *item = new thing(item_name);
-	if (item != nullptr) {
-		vector<thing*>::iterator itr = possessions.begin();
-		while (*itr != item && itr != possessions.end()) {
-			// Loops through inventory until specified item is found
-			itr++;
-		}
-		if (itr != possessions.end())
-		{
-			return true;
+	if (item_name != "") {
+		for (int i = 0; i < possessions.size(); i++) {
+			if (possessions[i]->get_name() == item_name) {
+				return true;
+			}
 		}
 	}
 	return false;

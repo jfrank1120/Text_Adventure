@@ -122,6 +122,7 @@ int main()
 	//main loop
 	while (true)
 	{
+		//cout << "Curr Loc: " << me.get_location()->get_name();
 		cout << "> ";
 		cin >> command;
 		if (command == "quit")

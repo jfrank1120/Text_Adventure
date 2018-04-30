@@ -5,7 +5,11 @@ class party_animal : public werewolf
 		party_animal(string name, place &loc, int thresh) : werewolf(name, loc, thresh) {};
 		virtual void party_animal::eat_person(person *person);
 };
-
+/*
+* Overriden function that will stop the party animal
+* from eating a person if there is a beer in their
+* inventory at the time that they are encountered
+*/
 void party_animal::eat_person(person *pers) {
 	if (pers->has_item("beer")) {
 		thing *beer = pers->get_item("beer");

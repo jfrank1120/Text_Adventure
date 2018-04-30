@@ -98,10 +98,12 @@ void person::greeted_by(person *persn)
 
 void person::take(thing *thng)
 {
-	location->remove_thing(thng);
-	possessions.push_back(thng);
-	thng->change_owner(this);
-	cout << thng->get_name() << " taken by " << get_name() << endl;
+	if (get_location()->contains_thing(thng->get_name())) {
+		location->remove_thing(thng);
+		possessions.push_back(thng);
+		thng->change_owner(this);
+		cout << thng->get_name() << " taken by " << get_name() << endl;
+	}
 }
 
 void person::go_look(direction dir)

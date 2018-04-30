@@ -41,7 +41,11 @@ void werewolf::eat_person(person *persn)
 		" says it is a far better place i go to " << endl;
 	persn->move_to(&heaven);
 }
-
+/*
+* Overriden Function only allows werewolfs to move
+* around in there own building, Restricted from
+* leaving the building.
+*/
 void werewolf::act()
 {
 	int num_exits = location->get_exits().size();

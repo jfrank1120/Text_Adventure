@@ -19,7 +19,7 @@ public:
 	void go_look(direction dir);
 	void take(thing *thng);
 	void drop(thing *thng);
-	bool has_item(string item_name);
+	bool has_item(string item_name) const;
 	thing* get_item(string item_name);
 	void clock();
 	virtual void act();
@@ -135,7 +135,9 @@ void person::act()
 	direction dir = (location->get_exits())[index];
 	go(dir);
 }
-// Completed
+/*
+* Function prints out a persons inventory
+*/
 void person::inventory() const {
 	cout << "In your inventory you have: ";
 	if (possessions.size() == 0) {
@@ -148,8 +150,12 @@ void person::inventory() const {
 	}
 	cout << endl;
 }
-
-bool person::has_item(string item_name) {
+/*
+* Function checks to see if the item given
+* as a parameter is in a persons inventory,
+* then based of that returns true or false.
+*/
+bool person::has_item(string item_name) const {
 	if (item_name != "") {
 		for (int i = 0; i < possessions.size(); i++) {
 			if (possessions[i]->get_name() == item_name) {
@@ -184,13 +190,19 @@ void person::drop(thing *thng) {
 	}
 	cout << endl;
 }
-// Checks to see if the item is in the same room as
-// the person who is attempting to interact with it
+/*
+* Function checks to see if the item is in the same
+* room as the person who is attempting to interact
+* with it.
+*/
 bool person::same_room(string name) const
 {
 	return location->contains_thing(name);
 }
-// Gets the intended item the person's inventory
+/*
+* Function gets the intended item from the person
+* inventory, and returns that possession.
+*/
 thing* person::get_item(string name)
 {
 	for (int i = 0; i < possessions.size(); i++)

@@ -32,7 +32,13 @@ void place::remove_thing(named_object *thng)
 			things.pop_back();
 		}
 }
-// Fixes error where object could be picked up anywhere
+/*
+* Function checks to see if a person can pick
+* up a item from in the room. This fixes the
+* error where objects could be picked up from
+* anywhere. Requires parameter thing, and
+* returns true or false.
+*/
 bool place::contains_thing(string thing) const {
 	for (int i = 0; i < things.size(); i++)
 	{
@@ -41,7 +47,10 @@ bool place::contains_thing(string thing) const {
 	}
 	return false;
 }
-
+/*
+* Equals operator that allows the comparison
+* of two places, returns true or false.
+*/
 bool operator==(place loc1, place loc2)
 {
 	return loc1.get_name() == loc2.get_name();

@@ -62,5 +62,12 @@ void werewolf::act()
 		index = 0;
 	}
 	direction dir = (location->get_exits())[index];
-	go(dir);
+	if (direction_to_string(dir) == "south" || direction_to_string(dir) == "north")
+	{
+		act();
+	}
+	else
+	{
+		go(dir);
+	}
 }
